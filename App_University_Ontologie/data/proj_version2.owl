@@ -1,0 +1,1110 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#real -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#real">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#CurrentProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#CurrentProject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#PastProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#PastProject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#PrimaryTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#PrimaryTopic">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#isPrimaryTopicOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Publication -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Publication">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Publication"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Publication"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rapport"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#a_lieu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#a_lieu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#account -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#account">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#OnlineAccount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#appartient_à -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#appartient_à"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#concerne -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#concerne">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rélévé_de_notes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#coordonne -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#coordonne">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#coordonne"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_coordinateur"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Filière"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#demande -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#demande">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_demandé_par"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rélévé_de_notes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#encadre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#encadre">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_encadré"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#enseigne -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#enseigne">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_enseigné"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_affilié -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_affilié">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etablissement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_composé -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_composé">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#module"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_demandé_par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_demandé_par">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rélévé_de_notes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_encadré -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_encadré">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_enseigné -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_enseigné">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_inscrit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_inscrit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_inscrit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etablissement"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_rédigé_par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_rédigé_par">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rédige"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rapport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_rédigé_par"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_validé_par -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#est_validé_par">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#valide"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#module"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#filière -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#filière">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#cycle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Filière"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#gender -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#homePage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#homePage">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#interest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#interest">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#isPrimaryTopicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#isPrimaryTopicOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#knows -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#knows">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#made -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#made">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#maker"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#maker -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#maker">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#member -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#member">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#passe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#passe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#propose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#propose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rédige -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rédige">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#made"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rapport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#topic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#topic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#topics_interest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#topics_interest">
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#valide -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#valide">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#module"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#workplaceHomepage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#workplaceHomepage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#accountName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#accountName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#OnlineAccount"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#accountServiceHomepage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#accountServiceHomepage">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#accountName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#birthday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#birthday">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#firstName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#lastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Projet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Ecole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Ecole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etablissement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Faculté"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Institut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Faculté -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Faculté">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etablissement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Institut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Filière -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Filière">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Group"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Institut -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Institut">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etablissement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#OnlineAccount -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#OnlineAccount"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#OnlineChatAccount -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#OnlineChatAccount">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#OnlineAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Presidence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Presidence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#université"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Projet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Projet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#chef_de_labo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#chef_de_labo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#chef_departement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#chef_departement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#cycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#cycle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#diplôme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#diplôme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#appartient_à"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etablissement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etablissement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#labo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#labo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#a_lieu"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#salle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#module -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#module"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_assistant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_assistant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_coordinateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_coordinateur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_habilité -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_habilité">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Personne"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#appartient_à"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#labo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rapport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rapport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rélévé_de_notes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rélévé_de_notes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#salle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#salle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#seminaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#seminaire">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#a_lieu"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etablissement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#soutenance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#soutenance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#stage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#stage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#université -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#université">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Ecole"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Faculté"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Institut"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Collecte_data_Data_Analyse -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Collecte_data_Data_Analyse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Projet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#A1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#A1.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#salle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#A2.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#A2.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#salle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Aboubacar_Sidiki_Camara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Aboubacar_Sidiki_Camara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <Publication rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Rapport_Projet_Web_Semantique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Ahlam_Elbarhoumi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Ahlam_Elbarhoumi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Arch_distriibu_et_Tech_du_web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Arch_distriibu_et_Tech_du_web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#module"/>
+        <est_composé rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#systeme_distribue"/>
+        <est_composé rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#xml_et_technologie_du_web"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#B1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#B1.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#salle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Cloud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Cloud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Filière"/>
+        <member rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Issam_Z"/>
+        <member rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Karam_Mohamed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#CreationOntologie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#CreationOntologie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Projet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Data_Analyse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Data_Analyse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+        <est_enseigné rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#ibrahim_amrani"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Driss_Bouzidi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Driss_Bouzidi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_coordinateur"/>
+        <appartient_à rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Labo_Rech"/>
+        <coordonne rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#M3S"/>
+        <enseigne rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Arch_distriibu_et_Tech_du_web"/>
+        <knows rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Rachida_Ajhoun"/>
+        <propose rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Arch_distriibu_et_Tech_du_web"/>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Bouzidi</lastName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Driss</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#ENSIAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#ENSIAS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Ecole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Genie_Log -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Genie_Log">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Filière"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#IOT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#IOT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Filière"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Ingenierie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Ingenierie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#cycle"/>
+        <filière rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Genie_Log"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Issam_Z -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Issam_Z">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-01-01T04:00:00-05:00</birthday>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Issam</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Zineb</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Janati -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Janati">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_habilité"/>
+        <enseigne rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#theorie_des_graphes"/>
+        <est_affilié rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#ENSIAS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Karam_Mohamed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Karam_Mohamed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Kasse_Dembele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Kasse_Dembele">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kasse</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Labo_Rech -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Labo_Rech">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#labo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#M3S -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#M3S">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Filière"/>
+        <member rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Kasse_Dembele"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Master -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Master">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#cycle"/>
+        <filière rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#IOT"/>
+        <filière rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#M3S"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Mathematiques_pour_les_reseaux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Mathematiques_pour_les_reseaux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#module"/>
+        <est_composé rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Data_Analyse"/>
+        <est_composé rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#theorie_des_graphes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Rachida_Ajhoun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Rachida_Ajhoun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_habilité"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#professeur"/>
+        <CurrentProject rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#CreationOntologie"/>
+        <enseigne rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#web_semantique"/>
+        <propose rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen_web_semantique"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Rachida</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Ajhoun</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Rapport_Projet_Web_Semantique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Rapport_Projet_Web_Semantique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rapport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Rapport_data_analyse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Rapport_data_analyse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#rapport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#S1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#S1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#S2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#S3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#S3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#S4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#S4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#semestre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Soufiane_benrabh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Soufiane_benrabh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#etudiant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#UniversitéeMohamed5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#UniversitéeMohamed5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#université"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#diplome_aboubacar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#diplome_aboubacar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#diplôme"/>
+        <appartient_à rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#Aboubacar_Sidiki_Camara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen_IA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen_IA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen_theorie_graphes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen_theorie_graphes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen_web_semantique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen_web_semantique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#examen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#ibrahim_amrani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#ibrahim_amrani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#prof_habilité"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#systeme_distribue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#systeme_distribue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#theorie_des_graphes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#theorie_des_graphes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#web_semantique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#web_semantique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#xml_et_technologie_du_web -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#xml_et_technologie_du_web">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#matière"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

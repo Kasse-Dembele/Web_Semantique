@@ -1,0 +1,6 @@
+PREFIX ns: <http://www.semanticweb.org/sidik/ontologies/2019/11/untitled-ontology-8#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?mere ?k  ?c
+WHERE {
+?mere ns:enseigne ?c .
+}
